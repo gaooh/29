@@ -1,0 +1,27 @@
+# == Schema Information
+#
+# Table name: mixi_active_histories
+#
+#  id          :integer(4)      not null, primary key
+#  history_day :date
+#  user_count  :integer(4)
+#  deleted_at  :datetime
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  history_day: 2009-01-01 
+  user_count: 1
+  before_days: 1
+  created_at: <%= Time.now.to_s :db %>
+  updated_at: <%= Time.now.to_s :db %>
+  
+two:
+  history_day: 2009-01-02
+  user_count: 1
+  before_days: 3
+  created_at: <%= Time.now.to_s :db %>
+  updated_at: <%= Time.now.to_s :db %>

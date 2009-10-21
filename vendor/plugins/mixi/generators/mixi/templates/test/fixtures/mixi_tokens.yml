@@ -1,0 +1,21 @@
+# == Schema Information
+#
+# Table name: mixi_tokens
+#
+#  id         :integer(4)      not null, primary key
+#  token      :string(255)
+#  use_flag   :boolean(1)
+#  deleted_at :datetime
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+secret_token:
+  token: secret_token
+  use_flag: false
+
+use_token:
+  token: use_token
+  use_flag: true
