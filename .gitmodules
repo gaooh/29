@@ -1,0 +1,3 @@
+[submodule "vendor/plugins/mixi"]
+	path = vendor/plugins/mixi
+	url = git@github.com:unshiu/peeled-unshiu-mixi.git
