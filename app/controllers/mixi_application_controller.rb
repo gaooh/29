@@ -30,7 +30,6 @@ private
     }
     
     is_valid_request = false
-
     if params[:oauth_signature_method] == 'HMAC-SHA1'
       # 署名方式が HMAC-SHA1 
       key = params[:oauth_consumer_key]
@@ -47,7 +46,7 @@ private
 
   end
 
-  def signature_validate(key = CONSUMER_KEY, secret = CONSUMER_SECRET, options={})
+  def signature_validate(key, secret, options={})
     consumer = OAuth::Consumer.new(key, secret, options)
     begin
       signature = OAuth::Signature.build(request) do
