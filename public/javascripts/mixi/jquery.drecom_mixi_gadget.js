@@ -197,7 +197,7 @@
 				} 
 				
 				if(typeof(urlParams) == "object" || urlParams instanceof Array) {
-					urlParams['opensocial_viewer_id'] = result.VIEWER.getId();
+					urlParams['sample_opensocial_viewer_id'] = result.VIEWER.getId();
 					if (config.session_id) urlParams[config.session_key] = config.session_id;
 				} else if(typeof(urlParams) == "string" || urlParams instanceof String) {
 					if (urlParams.length > 0) {
