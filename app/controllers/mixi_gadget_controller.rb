@@ -1,6 +1,6 @@
 class MixiGadgetController < MixiApplicationController
   include MixiGadgetControllerModule
-  before_filter :signature_require
+  before_filter :signature_require :except => [:index]
   
   # gadgetが表示されて最初に閲覧するページ。アプリ開発者がoverwriteして利用する
   # pnt_filter_title:　mixiアプリトップを表示
