@@ -284,6 +284,7 @@
 					}
 				}
 		  }
+			console.log(url);
 		  gadgets.io.makeRequest(url, callbackFunction, params);
 		}
 
