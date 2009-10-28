@@ -201,9 +201,9 @@
 					if (config.session_id) urlParams[config.session_key] = config.session_id;
 				} else if(typeof(urlParams) == "string" || urlParams instanceof String) {
 					if (urlParams.length > 0) {
-						urlParams += encodeURI("&opensocial_viewer_id=" + result.VIEWER.getId());
+						urlParams += encodeURI("&sample_opensocial_viewer_id=" + result.VIEWER.getId());
 					} else {
-						urlParams += encodeURI("?opensocial_viewer_id=" + result.VIEWER.getId());
+						urlParams += encodeURI("?sample_opensocial_viewer_id=" + result.VIEWER.getId());
 					}
 					if (config.session_id) urlParams += encodeURI("&" + config.session_key + "=" + config.session_id);
 				}
@@ -212,7 +212,6 @@
       if (useDeferred) {
         var deferred = new Deferred();
         requestServer(urlPath, urlParams, function(data){
-					console.log(data);
           // mixi 本番環境だと data.rc が取れないので data.text.length で仕方なく length でチェック。エラー時が取れない＞＜
           if (data && data.text && data.text.length > 0) {
             deferred.call(data);
@@ -284,7 +283,6 @@
 					}
 				}
 		  }
-			console.log(url);
 		  gadgets.io.makeRequest(url, callbackFunction, params);
 		}
 
