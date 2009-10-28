@@ -27,7 +27,7 @@ common: &common
   # 本番環境でエラーが発生したときにメールを送信
   exception_notifier_from_name: Application Error
   exception_notifier_from_address: applicationerror@unshiu.jp
-  exception_recipients: ""
+  exception_recipients: "silver.vine.ebisen+error@gmail.com"
 
   # tokyotyrant
   tokyotyrant_on : false # 利用するか
