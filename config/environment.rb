@@ -49,8 +49,8 @@ Rails::Initializer.run do |config|
   # end
   # See Rails::Configuration for more options
  
-  config.gem "mysql",              :version => "2.7"
-  config.gem "rmagick",            :version => "~> 2.5.0", :lib => 'RMagick'           
+  #config.gem "mysql",              :version => "2.7"
+  #config.gem "rmagick",            :version => "~> 2.5.0", :lib => 'RMagick'           
   config.gem "ar-extensions",      :version => "~> 0.8.2",   :install_options => "--ignore-dependencies"
   config.gem "capistrano",         :version => "~> 2.5"
   config.gem "fastercsv",          :version => "~> 1.2.3"
