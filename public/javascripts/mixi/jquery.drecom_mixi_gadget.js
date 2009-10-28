@@ -212,6 +212,7 @@
       if (useDeferred) {
         var deferred = new Deferred();
         requestServer(urlPath, urlParams, function(data){
+					console.log(data);
           // mixi 本番環境だと data.rc が取れないので data.text.length で仕方なく length でチェック。エラー時が取れない＞＜
           if (data && data.text && data.text.length > 0) {
             deferred.call(data);
@@ -265,7 +266,8 @@
 		  params[gadgets.io.RequestParameters.METHOD] = method;
 		  params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT;
 		  params[gadgets.io.RequestParameters.REFRESH_INTERVAL] = 0
-
+			params[gadgets.io.RequestParameters.AUTHORIZATION] = gadgets.io.AuthorizationType.SIGNED;
+			
 		  var url = "";
 		  if (method == gadgets.io.MethodType.POST) {
 		    url = config.base_url + urlPath;
