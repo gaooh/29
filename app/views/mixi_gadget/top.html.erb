@@ -4,4 +4,10 @@ $(function(){
 });
 </script>
 Welcome to mixiapp.
+<FORM>
+<INPUT TYPE="button" VALUE="ボタン" onClick="<%= post_activity({:title => 'hoge', :body => 'foo'}) %>">
+<INPUT TYPE="button" VALUE="ボタン" onClick="<%= post_activity({:title => 'hoge', :body => 'foo', :callback => "alert('hoge');"}) %>">
+<INPUT TYPE="button" VALUE="ボタン" onClick="<%= post_activity({:title => 'hoge', :body => 'foo', :media_item => ['http://redmine.unshiu.jp/themes/unshiu_theme/images/logo.png']}) %>">
+</FORM>
 <%= link_to_script "実行", :url => '/mixi_gadget/sample_test' %>
+
